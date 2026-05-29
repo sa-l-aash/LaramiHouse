@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <title>Larami Houses</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="nav" id="navbar">
+
+    <div class="logo">Larami Houses</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="narok.html">Narok</a></li>
+      <li><a href="mara.html">Mara</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-btn">☰</div>
+
+  </header>
+
+  <div class="menu-overlay"></div>
+
+  <div class="side-menu">
+    <a href="index.html">Home</a>
+    <a href="narok.html">Narok House</a>
+    <a href="mara.html">Mara House</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- =========================
+       HERO SLIDER
+  ========================== -->
+  <section class="hero-slider">
+
+    <div class="slide active" style="background-image:url('assets/images/hero1.jpg')">
+      <div class="overlay">
+        <h1>Two homes. One wilderness rhythm.</h1>
+        <p>Narok comfort • Mara wilderness escape</p>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image:url('assets/images/hero2.jpg')">
+      <div class="overlay">
+        <h1>Wake where silence feels alive</h1>
+        <p>Eco-stays near Maasai Mara conservancies</p>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image:url('assets/images/hero3.jpg')">
+      <div class="overlay">
+        <h1>Minimal luxury. Natural calm.</h1>
+        <p>Stay between comfort and wilderness</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       INTRO
+  ========================== -->
+  <section class="intro">
+    <h2>Larami Houses</h2>
+    <p>
+      A curated escape between Narok town and the edge of Maasai Mara.
+      Designed for stillness, comfort, and proximity to nature.
+    </p>
+  </section>
+
+  <!-- =========================
+       QUICK LINKS
+  ========================== -->
+  <section class="cards">
+
+    <a href="narok.html" class="card">
+      <h3>Narok House</h3>
+      <p>Modern town stay for rest & transit</p>
+    </a>
+
+    <a href="mara.html" class="card">
+      <h3>Mara House</h3>
+      <p>Eco sanctuary near wildlife corridors</p>
+    </a>
+
+    <a href="contact.html" class="card">
+      <h3>Book Stay</h3>
+      <p>WhatsApp or inquiry booking</p>
+    </a>
+
+  </section>
+
+  <!-- =========================
+       MOMENTS SLIDESHOW
+  ========================== -->
+  <section class="moments">
+
+    <h2>Moments from Larami</h2>
+
+    <div class="slideshow-container">
+
+      <div class="slide-img fade">
+        <img src="assets/images/mara1.webp">
+        <div class="caption">Narok House — Calm town living</div>
+      </div>
+
+      <div class="slide-img fade">
+        <img src="assets/images/narok2.webp">
+        <div class="caption">Narok House — Minimal comfort</div>
+      </div>
+
+      <div class="slide-img fade">
+        <img src="assets/images/mara1.webp">
+        <div class="caption">Mara House — Wild surroundings</div>
+      </div>
+
+      <div class="slide-img fade">
+        <img src="assets/images/mara2.webp">
+        <div class="caption">Mara House — Eco retreat</div>
+      </div>
+
+      <!-- controls (NO INLINE JS) -->
+      <a class="prev" id="prevSlide">&#10094;</a>
+      <a class="next" id="nextSlide">&#10095;</a>
+
+    </div>
+
+    <div class="dots">
+      <span data-slide="1"></span>
+      <span data-slide="2"></span>
+      <span data-slide="3"></span>
+      <span data-slide="4"></span>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       LIGHTBOX
+  ========================== -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" id="closeLightbox">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+  <!-- =========================
+       SCRIPT
+  ========================== -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>

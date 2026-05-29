@@ -1,0 +1,643 @@
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f4ef;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #222;
+  z-index: 9999;
+}
+
+/* =========================
+   NAVBAR (FIXED + CLEAN)
+========================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5000;
+
+  background: transparent;
+  transition: background 0.35s ease, padding 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* SCROLLED STATE (FIXED: removed red bug) */
+.nav.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 14px 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: opacity 0.25s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+/* =========================
+   MOBILE NAV (UNIFIED)
+========================= */
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 6000;
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+
+  background: #111;
+  padding: 80px 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transition: right 0.35s ease;
+  z-index: 7000;
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* OVERLAY */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+  z-index: 6500;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   HERO SLIDER
+========================= */
+
+.hero-slider {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+}
+
+.hero-slider .overlay {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+
+  max-width: 500px;
+  background: rgba(0,0,0,0.25);
+  padding: 20px;
+  border-radius: 10px;
+
+  color: white;
+}
+
+.hero-slider .overlay h1 {
+  font-size: 42px;
+}
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.overlay-text {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.intro{
+  text-align: center;
+}
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.content ul {
+  margin-left: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 50px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+}
+
+/* =========================
+   AIRBNB STYLE ROOM CARDS
+========================= */
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* MAIN CARD */
+.room-card-airbnb {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card-airbnb:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.room-image {
+  position: relative;
+}
+
+.room-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  background: rgba(255,255,255,0.9);
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+
+  font-weight: 600;
+  color: #222;
+}
+
+/* BODY */
+.room-body {
+  padding: 16px;
+}
+
+/* TITLE */
+.room-body h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* TAGLINE */
+.room-tagline {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* FEATURES */
+.room-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.room-features li {
+  font-size: 13px;
+  color: #444;
+  position: relative;
+  padding-left: 14px;
+}
+
+.room-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+/* FOOTER */
+.room-footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 12px;
+  color: #777;
+}
+
+/* BUTTON */
+.room-btn {
+  padding: 8px 12px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.room-btn:hover {
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .room-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.soft-list{
+  text-align: left;
+  padding: 0 15px 15px;
+}
+.section-sub{
+ font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+/* =========================
+   ROOM IMAGE SLIDER
+========================= */
+
+.room-image.slider {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+}
+
+.room-image.slider .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.room-image.slider .slide.active {
+  opacity: 1;
+}
+
+.room-image.slider img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* badge stays above */
+.room-image .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  z-index: 5;
+}
+/* =========================
+   AMENITIES (WOODEN / LUXURY STYLE)
+========================= */
+
+.amenities {
+  padding: 0px 60px;
+  text-align: center;
+}
+
+.amenities-sub {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+
+/* WOODEN STYLE CARD */
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 18px;
+  border-radius: 12px;
+
+  background: linear-gradient(145deg, #f2ede4, #e7dfd2);
+  box-shadow: 6px 6px 14px rgba(0,0,0,0.08),
+              -4px -4px 10px rgba(255,255,255,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+/* hover lift */
+.amenity-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 10px 18px rgba(0,0,0,0.12),
+              -4px -4px 10px rgba(255,255,255,0.7);
+}
+
+/* ICON */
+.icon {
+  font-size: 18px;
+}
+
+/* TEXT */
+.text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MOMENTS SLIDESHOW
+========================= */
+
+.moments {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.slideshow-container {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.slide-img {
+  display: none;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ARROWS */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* DOTS */
+.dots span {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  display: inline-block;
+  background: #bbb;
+  border-radius: 50%;
+}
+
+.active-dot {
+  background: #222;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #25D366;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+
+  text-decoration: none;
+  z-index: 8000;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .cards,
+  .room-grid,
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    padding: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-slider .overlay {
+    left: 20px;
+    right: 20px;
+  }
+}
