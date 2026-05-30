@@ -12,8 +12,11 @@
 
 body {
   background: #f6f4ef;
-  color: #222;
-  line-height: 1.6;
+  color: #000000;
+  line-height: 1.7;
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+  font-weight: 400;
+
 }
 
 /* =========================
@@ -31,102 +34,155 @@ body {
 }
 
 /* =========================
-   NAVBAR (FIXED + CLEAN)
+   PREMIUM SAFARI NAVBAR
 ========================= */
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Great Vibes', cursive !important;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  padding: 28px 80px;
-  position: fixed;
-  width: 100%;
-  top: 0;
+  padding: 28px 70px;
   z-index: 5000;
 
   background: transparent;
-  transition: background 0.35s ease, padding 0.3s ease, backdrop-filter 0.3s ease;
+
+  transition:
+    background 0.35s ease,
+    padding 0.3s ease,
+    backdrop-filter 0.3s ease;
 }
 
-/* SCROLLED STATE (FIXED: removed red bug) */
+/* =========================
+   SCROLLED NAVBAR
+========================= */
+
 .nav.scrolled {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(15, 15, 15, 0.82);
   backdrop-filter: blur(12px);
-  padding: 14px 80px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  padding: 18px 70px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
+
 .logo {
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  flex: 1;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 900;
+  font-size: 22px;
   color: white;
+  letter-spacing: 1.px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  flex: 2;
+
+  display: flex;
+  justify-content: left;
+  list-style: none;
+
+  gap: 42px;
 }
 
 /* LINKS */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 28px;
-}
 
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: opacity 0.25s ease;
   position: relative;
+  color: white;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease;
 }
 
 .nav-links a:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* ACTIVE LINK */
+
 .nav-links a.active {
-  font-weight: 600;
+  opacity: 1;
 }
+
+/* SMALL LUXURY INDICATOR */
 
 .nav-links a.active::after {
   content: "";
+
   position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
+
+  left: 50%;
+  bottom: -10px;
+
+  transform: translateX(-50%);
+
+  width: 18px;
+  height: 1px;
+
   background: white;
 }
 
 /* =========================
-   MOBILE NAV (UNIFIED)
+   MOBILE MENU BUTTON
 ========================= */
 
 .menu-btn {
+  flex: 1;
+
   display: none;
-  font-size: 28px;
+  justify-content: flex-end;
+
   color: white;
+  font-size: 30px;
+
   cursor: pointer;
-  z-index: 6000;
+
+  z-index: 8000;
 }
 
-/* SIDE MENU */
+/* =========================
+   MOBILE SIDE MENU
+========================= */
+
 .side-menu {
   position: fixed;
+
   top: 0;
   right: -100%;
+
   width: 280px;
   height: 100vh;
 
   background: #111;
-  padding: 80px 30px;
+
+  padding: 100px 35px;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+
+  gap: 24px;
 
   transition: right 0.35s ease;
+
   z-index: 7000;
 }
 
@@ -136,26 +192,141 @@ body {
 
 .side-menu a {
   color: white;
+
   text-decoration: none;
-  font-size: 18px;
+
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  transition: opacity 0.25s ease;
 }
 
-/* OVERLAY */
+.side-menu a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   MENU OVERLAY
+========================= */
+
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+
+  background: rgba(0, 0, 0, 0.55);
 
   opacity: 0;
   visibility: hidden;
 
   transition: 0.3s ease;
+
   z-index: 6500;
 }
 
 .menu-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav {
+    padding: 24px 24px;
+  }
+
+  .nav.scrolled {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: "Cormorant Garamond", serif;
+
+  }
+}
+
+/* =========================
+   PREMIUM HERO UPGRADE
+========================= */
+
+.page-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  overflow: hidden;
+}
+
+/* background layer */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+}
+
+/* dark overlay (luxury depth) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.35));
+}
+
+/* content */
+.overlay-text {
+  position: relative;
+  color: white;
+  max-width: 600px;
+
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+
+  padding: 24px;
+  border-radius: 14px;
+}
+
+/* buttons */
+.hero-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+.hero-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hero-btn.primary {
+  background: #ffffff;
+  color: #111;
+}
+
+.hero-btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
 }
 
 /* =========================
@@ -188,7 +359,7 @@ body {
   left: 80px;
 
   max-width: 500px;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.25);
   padding: 20px;
   border-radius: 10px;
 
@@ -214,14 +385,16 @@ body {
 }
 
 .overlay-text {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
   border-radius: 10px;
 }
-.intro{
+
+.intro {
   text-align: center;
 }
+
 /* =========================
    CONTENT
 ========================= */
@@ -291,7 +464,7 @@ body {
   border-radius: 18px;
   overflow: hidden;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   display: flex;
@@ -300,7 +473,7 @@ body {
 
 .room-card-airbnb:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
 }
 
 /* IMAGE */
@@ -321,7 +494,7 @@ body {
   top: 12px;
   left: 12px;
 
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 6px 10px;
   font-size: 12px;
   border-radius: 20px;
@@ -333,18 +506,27 @@ body {
 /* BODY */
 .room-body {
   padding: 16px;
+  color: #000000;
+
+}
+
+.rooms h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #000000;
 }
 
 /* TITLE */
 .room-body h3 {
   font-size: 18px;
   margin-bottom: 6px;
+  text-align: centre;
 }
 
 /* TAGLINE */
 .room-tagline {
   font-size: 14px;
-  color: #666;
+  color: #000000;
   margin-bottom: 12px;
 }
 
@@ -361,7 +543,7 @@ body {
 
 .room-features li {
   font-size: 13px;
-  color: #444;
+  color: #000000;
   position: relative;
   padding-left: 14px;
 }
@@ -370,7 +552,7 @@ body {
   content: "•";
   position: absolute;
   left: 0;
-  color: #999;
+  color: #000000;
 }
 
 /* FOOTER */
@@ -379,11 +561,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.price {
-  font-size: 12px;
-  color: #777;
 }
 
 /* BUTTON */
@@ -407,15 +584,83 @@ body {
     grid-template-columns: 1fr;
   }
 }
-.soft-list{
+
+.soft-list {
   text-align: left;
   padding: 0 15px 15px;
 }
-.section-sub{
- font-weight: bold;
+
+.section-sub {
+  text-align: center;
+  font-weight: bold;
   margin-bottom: 40px;
   font-size: 14px;
+  color: #000000;
 }
+
+.booking-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+/* PILL BUTTON BASE */
+.pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  background: white;
+  color: #222;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s ease;
+
+  transform: translateY(0);
+}
+
+/* ICON inside pill */
+.pill-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* HOVER FLOAT EFFECT */
+.pill-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* AIRBNB STYLE */
+.pill-btn.airbnb:hover {
+  box-shadow: 0 12px 26px rgba(255, 90, 95, 0.35);
+}
+
+/* BOOKING STYLE */
+.pill-btn.booking:hover {
+  box-shadow: 0 12px 26px rgba(0, 53, 128, 0.35);
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 480px) {
+  .pill-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.pill-btn:active {
+  transform: scale(0.96);
+}
+
 /* =========================
    ROOM IMAGE SLIDER
 ========================= */
@@ -449,25 +694,26 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 20px;
   z-index: 5;
 }
+
 /* =========================
    AMENITIES (WOODEN / LUXURY STYLE)
 ========================= */
 
 .amenities {
-  padding: 0px 60px;
+  padding: 20px 60px;
   text-align: center;
 }
 
 .amenities-sub {
   margin-top: 10px;
-  color: #666;
+  color: #000000;
   font-size: 14px;
 }
 
@@ -489,8 +735,8 @@ body {
   border-radius: 12px;
 
   background: linear-gradient(145deg, #f2ede4, #e7dfd2);
-  box-shadow: 6px 6px 14px rgba(0,0,0,0.08),
-              -4px -4px 10px rgba(255,255,255,0.6);
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.08),
+    -4px -4px 10px rgba(255, 255, 255, 0.6);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
@@ -499,8 +745,8 @@ body {
 /* hover lift */
 .amenity-item:hover {
   transform: translateY(-3px);
-  box-shadow: 8px 10px 18px rgba(0,0,0,0.12),
-              -4px -4px 10px rgba(255,255,255,0.7);
+  box-shadow: 8px 10px 18px rgba(0, 0, 0, 0.12),
+    -4px -4px 10px rgba(255, 255, 255, 0.7);
 }
 
 /* ICON */
@@ -549,19 +795,25 @@ body {
 }
 
 /* ARROWS */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   padding: 10px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   cursor: pointer;
   border-radius: 50%;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
 
 /* DOTS */
 .dots span {
@@ -603,7 +855,7 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
   z-index: 9000;
@@ -614,10 +866,33 @@ body {
 }
 
 /* =========================
+   map section
+========================= */
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.map-section h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
+
   .cards,
   .room-grid,
   .amenities-grid {

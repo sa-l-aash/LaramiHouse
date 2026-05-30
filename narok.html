@@ -5,12 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
-
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https:;
+frame-src https://www.google.com https://www.google.com/maps;
+">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
   <title>Narok House | Larami Houses</title>
 
   <link rel="stylesheet" href="style.css">
@@ -68,298 +74,356 @@
 
   </section>
 
-<!-- =========================
+  <!-- =========================
      ROOMS (AIRBNB STYLE UPGRADE)
 ========================= -->
 
-<section class="rooms">
+  <section class="rooms">
 
-  <h2>Stay Options at Narok House</h2>
+    <h2>Stay Options at Narok House</h2>
 
-  <p class="section-sub">
-    Choose the space that fits your stay — from solo comfort to family living.
-  </p>
+    <p class="section-sub">
+      Choose the space that fits your stay — from solo comfort to family living.
+    </p>
 
-  <div class="room-grid">
+    <div class="room-grid">
 
-    <!-- FAMILY HOUSE -->
-    <div class="room-card-airbnb">
+      <!-- FAMILY HOUSE -->
+      <div class="room-card-airbnb">
 
-     <div class="room-image slider">
+        <div class="room-image slider">
 
-  <div class="slide active">
-    <img src="assets/images/family.webp" alt="Family House">
-  </div>
+          <div class="slide active">
+            <img src="assets/images/family.webp" alt="Family House">
+          </div>
 
-  <div class="slide">
-    <img src="assets/images/family2.webp" alt="Family House">
-  </div>
+          <div class="slide">
+            <img src="assets/images/family2.webp" alt="Family House">
+          </div>
 
-  <div class="slide">
-    <img src="assets/images/family3.webp" alt="Family House">
-  </div><span class="badge">Best for families</span>
+          <div class="slide">
+            <img src="assets/images/family3.webp" alt="Family House">
+          </div><span class="badge">Best for families</span>
+        </div>
+
+        <div class="room-body">
+          <h3>Family / Ndovu House</h3>
+
+          <p class="room-tagline">
+            Spacious comfort designed for families and groups.
+          </p>
+
+          <ul class="room-features">
+            <li>3 self-contained bedrooms</li>
+            <li>Fast Wi-Fi & flat-screen TV</li>
+            <li>Comfortable shared living area</li>
+            <li>Fully equipped kitchen</li>
+            <li>Private bathrooms</li>
+            <li>Secure & quiet environment</li>
+          </ul>
+
+          <div class="room-footer">
+            <div class="booking-buttons">
+
+              <a href="https://www.airbnb.com/rooms/1597723472525525402?guests=1&adults=1&s=67&unique_share_id=b5dbf56c-d886-4f36-832a-b518495f26a3"
+                target="_blank" class="pill-btn airbnb">
+                <img src="assets/icons/airbnb.svg" alt="Airbnb">
+                <span>Airbnb</span>
+              </a>
+
+              <a href="https://www.booking.com/Share-R8OFgGt" target="_blank" class="pill-btn booking">
+                <img src="assets/icons/booking.jpeg" alt="Booking.com">
+                <span>Booking.com</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="room-body">
-        <h3>Family / Ndovu House</h3>
+      <!-- 1 BEDROOM -->
+      <div class="room-card-airbnb">
 
-        <p class="room-tagline">
-          Spacious comfort designed for families and groups.
-        </p>
+        <div class="room-image slider">
 
-        <ul class="room-features">
-          <li>3 self-contained bedrooms</li>
-          <li>Fast Wi-Fi & flat-screen TV</li>
-          <li>Comfortable shared living area</li>
-          <li>Fully equipped kitchen</li>
-          <li>Private bathrooms</li>
-          <li>Secure & quiet environment</li>
-        </ul>
+          <div class="slide active">
+            <img src="assets/images/simba1.webp" alt="Family House">
+          </div>
 
-        <div class="room-footer">
-          <span class="price">Ideal for groups & long stays</span>
-          <a href="contact.html" class="room-btn">Book Stay</a>
+          <div class="slide">
+            <img src="assets/images/simba2.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/simba3.webp" alt="Family House">
+          </div>
+          <span class="badge">Couple friendly</span>
         </div>
+
+        <div class="room-body">
+          <h3>Simba House</h3>
+
+          <p class="room-tagline">
+            Modern one-bedroom space for calm, private stays.
+          </p>
+
+          <ul class="room-features">
+            <li>Queen-sized bed</li>
+            <li>Private sitting area</li>
+            <li>Fast Wi-Fi</li>
+            <li>Flat-screen TV</li>
+            <li>Hot shower bathroom</li>
+            <li>Peaceful environment</li>
+          </ul>
+
+          <div class="room-footer">
+            <div class="booking-buttons">
+
+              <a href="https://www.airbnb.com/rooms/1597792254055171703?guests=1&adults=1&s=67&unique_share_id=fd0ac113-8766-4bb4-8ba7-d76673a80153"
+                target="_blank" class="pill-btn airbnb">
+                <img src="assets/icons/airbnb.svg" alt="Airbnb">
+                <span>Airbnb</span>
+              </a>
+
+              <a href="https://www.booking.com/Share-R8OFgGt" target="_blank" class="pill-btn booking">
+                <img src="assets/icons/booking.jpeg" alt="Booking.com">
+                <span>Booking.com</span>
+              </a>
+
+            </div> </div>
+        </div>
+
+      </div>
+
+      <!-- 1 BEDROOM 2 -->
+      <div class="room-card-airbnb">
+
+        <div class="room-image slider">
+
+          <div class="slide active">
+            <img src="assets/images/nyati1.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/nyati2.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/nyati3.webp" alt="Family House">
+          </div>
+          <span class="badge">Comfort stay</span>
+        </div>
+
+        <div class="room-body">
+          <h3>Nyati House</h3>
+
+          <p class="room-tagline">
+            Cozy one-bedroom with modern essentials.
+          </p>
+
+          <ul class="room-features">
+            <li>Queen-sized bed</li>
+            <li>Private lounge area</li>
+            <li>Fast Wi-Fi</li>
+            <li>TV included</li>
+            <li>Hot shower</li>
+            <li>Quiet stay</li>
+          </ul>
+
+          <div class="room-footer">
+            <div class="booking-buttons">
+
+              <a href="https://www.airbnb.com/rooms/1597723387243129192?guests=1&adults=1&s=67&unique_share_id=40e7b72a-b550-40c5-952d-007f96e9ebed"
+                target="_blank" class="pill-btn airbnb">
+                <img src="assets/icons/airbnb.svg" alt="Airbnb">
+                <span>Airbnb</span>
+              </a>
+
+              <a href="https://www.booking.com/Share-R8OFgGt" target="_blank" class="pill-btn booking">
+                <img src="assets/icons/booking.jpeg" alt="Booking.com">
+                <span>Booking.com</span>
+              </a>
+
+            </div></div>
+        </div>
+
+      </div>
+
+      <!-- STUDIO 1 -->
+      <div class="room-card-airbnb">
+
+        <div class="room-image slider">
+
+          <div class="slide active">
+            <img src="assets/images/kifaru1.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/kifaru2.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/kifaru3.webp" alt="Family House">
+          </div>
+          <span class="badge">Budget friendly</span>
+        </div>
+
+        <div class="room-body">
+          <h3>Kifaru House</h3>
+
+          <p class="room-tagline">
+            Simple studio designed for comfort & affordability.
+          </p>
+
+          <ul class="room-features">
+            <li>Open-plan layout</li>
+            <li>Comfortable bed</li>
+            <li>Private bathroom</li>
+            <li>Fast Wi-Fi</li>
+            <li>TV included</li>
+            <li>Solo traveler friendly</li>
+          </ul>
+
+          <div class="room-footer">
+            <div class="booking-buttons">
+
+              <a href="https://www.airbnb.com/rooms/1597809290642472584?guests=1&adults=1&s=67&unique_share_id=75cbbe5c-117b-4ccf-9840-07eb1381acbd"
+                target="_blank" class="pill-btn airbnb">
+                <img src="assets/icons/airbnb.svg" alt="Airbnb">
+                <span>Airbnb</span>
+              </a>
+
+              <a href="https://www.booking.com/Share-R8OFgGt" target="_blank" class="pill-btn booking">
+                <img src="assets/icons/booking.jpeg" alt="Booking.com">
+                <span>Booking.com</span>
+              </a>
+
+            </div></div>
+        </div>
+
+      </div>
+
+      <!-- STUDIO 2 -->
+      <div class="room-card-airbnb">
+        <div class="room-image slider">
+
+          <div class="slide active">
+            <img src="assets/images/chui1.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/chui2.webp" alt="Family House">
+          </div>
+
+          <div class="slide">
+            <img src="assets/images/chui3.webp" alt="Family House">
+          </div>
+          <span class="badge">Minimal stay</span>
+        </div>
+
+        <div class="room-body">
+          <h3>Chui House</h3>
+
+          <p class="room-tagline">
+            Minimal studio for privacy and simplicity.
+          </p>
+
+          <ul class="room-features">
+            <li>Open-plan living</li>
+            <li>Cozy bed setup</li>
+            <li>Hot shower</li>
+            <li>Fast Wi-Fi</li>
+            <li>TV included</li>
+            <li>Ideal for solo stays</li>
+          </ul>
+
+          <div class="room-footer">
+            <div class="booking-buttons">
+
+              <a href="https://www.airbnb.com/rooms/1597792191719651688?guests=1&adults=1&s=67&unique_share_id=35e9f5de-b818-4cb2-abf0-c8fb7b0bc161"
+                target="_blank" class="pill-btn airbnb">
+                <img src="assets/icons/airbnb.svg" alt="Airbnb">
+                <span>Airbnb</span>
+              </a>
+
+              <a href="https://www.booking.com/Share-R8OFgGt" target="_blank" class="pill-btn booking">
+                <img src="assets/icons/booking.jpeg" alt="Booking.com">
+                <span>Booking.com</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-    <!-- 1 BEDROOM -->
-    <div class="room-card-airbnb">
-
-      <div class="room-image slider">
-
-  <div class="slide active">
-    <img src="assets/images/simba1.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/simba2.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/simba3.webp" alt="Family House">
-  </div>
-<span class="badge">Couple friendly</span>
-      </div>
-
-      <div class="room-body">
-        <h3>Simba House</h3>
-
-        <p class="room-tagline">
-          Modern one-bedroom space for calm, private stays.
-        </p>
-
-        <ul class="room-features">
-          <li>Queen-sized bed</li>
-          <li>Private sitting area</li>
-          <li>Fast Wi-Fi</li>
-          <li>Flat-screen TV</li>
-          <li>Hot shower bathroom</li>
-          <li>Peaceful environment</li>
-        </ul>
-
-        <div class="room-footer">
-          <span class="price">Perfect for couples</span>
-          <a href="contact.html" class="room-btn">Book Stay</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 1 BEDROOM 2 -->
-    <div class="room-card-airbnb">
-
-     <div class="room-image slider">
-
-  <div class="slide active">
-    <img src="assets/images/nyati1.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/nyati2.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/nyati3.webp" alt="Family House">
-  </div>
-<span class="badge">Comfort stay</span>
-      </div>
-
-      <div class="room-body">
-        <h3>Nyati House</h3>
-
-        <p class="room-tagline">
-          Cozy one-bedroom with modern essentials.
-        </p>
-
-        <ul class="room-features">
-          <li>Queen-sized bed</li>
-          <li>Private lounge area</li>
-          <li>Fast Wi-Fi</li>
-          <li>TV included</li>
-          <li>Hot shower</li>
-          <li>Quiet stay</li>
-        </ul>
-
-        <div class="room-footer">
-          <span class="price">Perfect for couples</span>
-          <a href="contact.html" class="room-btn">Book Stay</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- STUDIO 1 -->
-    <div class="room-card-airbnb">
-
-      <div class="room-image slider">
-
-  <div class="slide active">
-    <img src="assets/images/kifaru1.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/kifaru2.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/kifaru3.webp" alt="Family House">
-  </div>
-<span class="badge">Budget friendly</span>
-      </div>
-
-      <div class="room-body">
-        <h3>Kifaru House</h3>
-
-        <p class="room-tagline">
-          Simple studio designed for comfort & affordability.
-        </p>
-
-        <ul class="room-features">
-          <li>Open-plan layout</li>
-          <li>Comfortable bed</li>
-          <li>Private bathroom</li>
-          <li>Fast Wi-Fi</li>
-          <li>TV included</li>
-          <li>Solo traveler friendly</li>
-        </ul>
-
-        <div class="room-footer">
-          <span class="price">Great value stay</span>
-          <a href="contact.html" class="room-btn">Book Stay</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- STUDIO 2 -->
-    <div class="room-card-airbnb">
-<div class="room-image slider">
-
-  <div class="slide active">
-    <img src="assets/images/chui1.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/chui2.webp" alt="Family House">
-  </div>
-
-  <div class="slide">
-    <img src="assets/images/chui3.webp" alt="Family House">
-  </div>
-<span class="badge">Minimal stay</span>
-      </div>
-
-      <div class="room-body">
-        <h3>Chui House</h3>
-
-        <p class="room-tagline">
-          Minimal studio for privacy and simplicity.
-        </p>
-
-        <ul class="room-features">
-          <li>Open-plan living</li>
-          <li>Cozy bed setup</li>
-          <li>Hot shower</li>
-          <li>Fast Wi-Fi</li>
-          <li>TV included</li>
-          <li>Ideal for solo stays</li>
-        </ul>
-
-        <div class="room-footer">
-          <span class="price">Simple & private</span>
-          <a href="contact.html" class="room-btn">Book Stay</a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
+  <!-- =========================
      AMENITIES (PREMIUM STYLE)
 ========================== -->
 
-<section class="amenities">
+  <section class="amenities">
 
-  <h2>Amenities</h2>
-  <p class="amenities-sub">Everything you need for a calm and comfortable stay</p>
+    <h2>Amenities</h2>
+    <p class="amenities-sub">Everything you need for a calm and comfortable stay</p>
 
-  <div class="amenities-grid">
+    <div class="amenities-grid">
 
-    <div class="amenity-item">
-      <span class="icon">🛏️</span>
-      <span class="text">Comfortable Beds</span>
+      <div class="amenity-item">
+        <span class="icon">🛏️</span>
+        <span class="text">Comfortable Beds</span>
+      </div>
+
+      <div class="amenity-item">
+        <span class="icon">📶</span>
+        <span class="text">Fast Wi-Fi</span>
+      </div>
+
+      <div class="amenity-item">
+        <span class="icon">🚗</span>
+        <span class="text">Secure Parking</span>
+      </div>
+
+      <div class="amenity-item">
+        <span class="icon">🚿</span>
+        <span class="text">Hot Showers</span>
+      </div>
+
+      <div class="amenity-item">
+        <span class="icon">🍽️</span>
+        <span class="text">Nearby Restaurants</span>
+      </div>
+
+      <div class="amenity-item">
+        <span class="icon">🧭</span>
+        <span class="text">Easy Transport Access</span>
+      </div>
+
     </div>
 
-    <div class="amenity-item">
-      <span class="icon">📶</span>
-      <span class="text">Fast Wi-Fi</span>
-    </div>
+  </section>
+  <!-- =========================
+       Map section
+  ========================== -->
+<section class="map-section">
 
-    <div class="amenity-item">
-      <span class="icon">🚗</span>
-      <span class="text">Secure Parking</span>
-    </div>
+  <h2>Location</h2>
 
-    <div class="amenity-item">
-      <span class="icon">🚿</span>
-      <span class="text">Hot Showers</span>
-    </div>
-
-    <div class="amenity-item">
-      <span class="icon">🍽️</span>
-      <span class="text">Nearby Restaurants</span>
-    </div>
-
-    <div class="amenity-item">
-      <span class="icon">🧭</span>
-      <span class="text">Easy Transport Access</span>
-    </div>
-
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.63930120555375!2d35.8689863!3d-1.0762824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182c03848d0c072f%3A0x23245081c3fd525a!2slarami%20house%20narok!5e0!3m2!1sen!2ske!4v1780127070364!5m2!1sen!2ske"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
   </div>
 
 </section>
-
-  <!-- =========================
-       MAP (FIXED)
-  ========================== -->
-  <section class="map-section">
-
-    <h2>Location</h2>
-
-    <iframe
-      src="https://www.google.com/maps?q=Narok%20Town%20Kenya&output=embed"
-      width="100%"
-      height="350"
-      style="border:0; border-radius:12px;"
-      loading="lazy">
-    </iframe>
-
-  </section>
-  </section>
 
   <!-- =========================
        WHATSAPP BUTTON

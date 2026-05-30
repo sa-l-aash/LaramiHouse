@@ -5,12 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
-
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https:;
+frame-src https://www.google.com https://www.google.com/maps;
+">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <title>Mara House | Larami Houses</title>
 
   <link rel="stylesheet" href="style.css">
@@ -47,18 +52,34 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- =========================
-       HERO SECTION
-  ========================== -->
-  <section class="page-hero" style="background-image:url('assets/images/mara1.webp')">
+<!-- =========================
+     HERO SECTION
+========================== -->
 
-    <div class="overlay-text">
+<section class="hero-slider">
+
+  <div class="slide active" style="background-image:url('assets/images/mara1.webp')">
+    <div class="overlay">
       <h1>Mara House</h1>
       <p>Where nature breathes closer</p>
     </div>
+  </div>
 
-  </section>
+  <div class="slide" style="background-image:url('assets/images/mara2.webp')">
+    <div class="overlay">
+      <h1>Wild Luxury</h1>
+      <p>Wake up to the sounds of the Mara ecosystem</p>
+    </div>
+  </div>
 
+  <div class="slide" style="background-image:url('assets/images/mara3.webp')">
+    <div class="overlay">
+      <h1>Private Safari Retreat</h1>
+      <p>Nature, comfort and unforgettable wildlife encounters</p>
+    </div>
+  </div>
+
+</section>
   <!-- =========================
        ABOUT SECTION
   ========================== -->

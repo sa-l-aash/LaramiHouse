@@ -5,12 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
-
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https:;
+frame-src https://www.google.com https://www.google.com/maps;
+">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <title>About | Larami Houses</title>
 
   <link rel="stylesheet" href="style.css">
@@ -50,7 +55,7 @@
   <!-- =========================
        HERO
   ========================== -->
-  <section class="page-hero" style="background-image:url('assets/images/hero2.jpg')">
+  <section class="page-hero" style="background-image:url('assets/images/family2.webp')">
 
     <div class="overlay-text">
       <h1>Our Story</h1>
