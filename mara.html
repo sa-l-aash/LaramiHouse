@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="Content-Security-Policy" content="
+  <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
@@ -15,7 +15,8 @@ frame-src https://www.google.com https://www.google.com/maps;
 ">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <title>Mara House | Larami Houses</title>
 
   <link rel="stylesheet" href="style.css">
@@ -24,107 +25,201 @@ frame-src https://www.google.com https://www.google.com/maps;
 <body>
 
   <!-- =========================
-       NAVBAR (GLOBAL FIXED)
+       NAVBAR
   ========================== -->
-  <header class="nav" id="navbar">
+  <div id="navbar-container"></div>
 
-    <div class="logo">Larami Houses</div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="narok.html">Narok</a></li>
-      <li><a href="mara.html">Mara</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="menu-btn">☰</div>
-
-  </header>
-
-  <div class="menu-overlay"></div>
-
-  <div class="side-menu">
-    <a href="index.html">Home</a>
-    <a href="narok.html">Narok House</a>
-    <a href="mara.html">Mara House</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-<!-- =========================
+  <!-- =========================
      HERO SECTION
 ========================== -->
 
-<section class="hero-slider">
+  <section class="hero-slider">
 
-  <div class="slide active" style="background-image:url('assets/images/mara1.webp')">
-    <div class="overlay">
-      <h1>Mara House</h1>
-      <p>Where nature breathes closer</p>
+    <div class="slide active" style="background-image:url('assets/images/mara1.webp')">
+      <div class="overlay">
+        <h1>Mara House</h1>
+        <p>Where nature breathes closer</p>
+      </div>
     </div>
-  </div>
 
-  <div class="slide" style="background-image:url('assets/images/mara2.webp')">
-    <div class="overlay">
-      <h1>Wild Luxury</h1>
-      <p>Wake up to the sounds of the Mara ecosystem</p>
+    <div class="slide" style="background-image:url('assets/images/mara2.webp')">
+      <div class="overlay">
+        <h1>Wild Luxury</h1>
+        <p>Wake up to the sounds of the Mara ecosystem</p>
+      </div>
     </div>
-  </div>
 
-  <div class="slide" style="background-image:url('assets/images/mara3.webp')">
-    <div class="overlay">
-      <h1>Private Safari Retreat</h1>
-      <p>Nature, comfort and unforgettable wildlife encounters</p>
+    <div class="slide" style="background-image:url('assets/images/mara3.webp')">
+      <div class="overlay">
+        <h1>Private Safari Retreat</h1>
+        <p>Nature, comfort and unforgettable wildlife encounters</p>
+      </div>
     </div>
-  </div>
+
+  </section>
+<!-- =========================
+     MARA STORY SECTION
+========================= -->
+<section class="content">
+
+  <h2>A home built inside the wild</h2>
+
+  <p>
+    Set near the Maasai Mara conservancies, Mara House exists in one of Kenya’s most
+    naturally active wildlife corridors — where elephants move freely and the horizon never ends.
+  </p>
+
+  <p>
+    This is a private eco-retreat designed for silence, space, and connection with nature
+    rather than a typical hotel experience.
+  </p>
 
 </section>
-  <!-- =========================
-       ABOUT SECTION
-  ========================== -->
-  <section class="content">
+<!-- =========================
+     QUICK EXPERIENCE STRIP
+========================= -->
+<section class="experience-strip">
 
-    <h2>About Mara House</h2>
+  <div class="experience-item"> Wildlife at your doorstep</div>
+  <div class="experience-item"> Eco forest living</div>
+  <div class="experience-item"> Bush dining options</div>
+  <div class="experience-item"> Guided game drives</div>
+  <div class="experience-item"> Safari photography base</div>
 
-    <p>
-      Larami House Mara is an eco-inspired retreat located near Maasai Mara conservancies.
-      It offers a peaceful connection to wildlife, open landscapes, and natural silence.
-    </p>
+</section>
+<!-- =========================
+     HOUSE DETAILS
+========================= -->
+<section class="content">
 
-    <h3>Experience includes</h3>
+  <h2>The House</h2>
 
-    <ul>
-      <li>Eco-friendly accommodation powered by solar energy</li>
-      <li>Close proximity to wildlife corridors</li>
-      <li>Peaceful natural surroundings with open views</li>
-      <li>Guided game drive options (extra service)</li>
-      <li>Ideal for nature lovers, photographers, and explorers</li>
-    </ul>
+  <p>
+    A fully private eco-home designed for families, groups, and safari travelers seeking comfort within nature.
+  </p>
 
-    <a href="contact.html" class="btn">Book Mara Stay</a>
+  <ul>
+    <li>3 spacious bedrooms (en-suite options) & 2 tents</li>
+    <li>Private living & dining space</li>
+    <li>Outdoor veranda facing natural landscape</li>
+    <li>Fully equipped kitchen</li>
+    <li>Optional staffed service on request</li>
+  </ul>
 
-  </section>
+</section>
+<!-- =========================
+     ACTIVITIES SECTION
+========================= -->
+<section class="amenities">
 
-  <!-- =========================
-       HIGHLIGHTS SECTION (ADDED VALUE)
-  ========================== -->
-  <section class="amenities">
+  <h2>Experiences Around You</h2>
 
-    <h2>Mara Experience Highlights</h2>
+  <div class="amenities-grid">
 
-    <div class="amenities-grid">
+    <div class="amenity"> Game drives in Maasai Mara</div>
+    <div class="amenity"> Guided nature walks</div>
+    <div class="amenity"> Sunrise viewing sessions</div>
+    <div class="amenity"> Bush dinners under stars</div>
+    <div class="amenity"> Wildlife corridor viewing</div>
+    <div class="amenity"> Photography safaris</div>
 
-      <div class="amenity">🌿 Eco-Friendly Living</div>
-      <div class="amenity">🦁 Wildlife Proximity</div>
-      <div class="amenity">🔆 Solar Powered Systems</div>
-      <div class="amenity">🌄 Open Landscape Views</div>
-      <div class="amenity">🚙 Game Drive Options</div>
-      <div class="amenity">🧘 Quiet Natural Environment</div>
+  </div>
 
+<!-- =========================
+     FEATURED GALLERY
+========================= -->
+
+<section class="gallery">
+
+  <h2>Gallery</h2>
+
+  <p class="gallery-sub">
+    Explore Larami through carefully captured moments.
+  </p>
+
+  <!-- BIG IMAGE -->
+  <div class="gallery-feature">
+
+    <img
+      id="featured-image"
+      src="assets/images/gallery1.webp"
+      alt="Gallery Image">
+
+    <div class="gallery-caption" id="gallery-caption">
+      Family Bedroom
     </div>
 
-  </section>
+    <!-- =========================
+     FULLSCREEN GALLERY MODAL
+========================= -->
+
+<div class="gallery-modal" id="gallery-modal">
+
+  <span class="gallery-close" id="gallery-close">&times;</span>
+
+  <img id="modal-image" src="" alt="Full view">
+
+  <div class="modal-caption" id="modal-caption"></div>
+
+</div>
+
+  </div>
+
+  <!-- THUMBNAILS -->
+<div class="gallery-grid">
+
+  <img src="assets/images/family.webp"
+       class="gallery-thumb active-thumb"
+       data-title="Family Bedroom">
+
+  <img src="assets/images/family1.webp"
+       class="gallery-thumb"
+       data-title="Simba Sitting Area">
+
+  <img src="assets/images/family2.webp"
+       class="gallery-thumb"
+       data-title="Nyati Lounge">
+
+  <img src="assets/images/family3.webp"
+       class="gallery-thumb"
+       data-title="Kifaru Studio">
+
+  <img src="assets/images/narok1.webp"
+       class="gallery-thumb"
+       data-title="Chui Minimal Room">
+
+  <img src="assets/images/narok2.webp"
+       class="gallery-thumb"
+       data-title="Outdoor Views">
+
+</div>
+
+</section>
+</section>
+<!-- =========================
+     LOCATION SECTION
+========================= -->
+<section class="content">
+
+  <h2>Where You’ll Stay</h2>
+
+  <p>
+    Located between Enonkishu and Mara Mbokishi conservancies, surrounded by active wildlife corridors
+    and open savannah landscapes.
+  </p>
+
+</section>
+<section class="content">
+
+  <h2>Book Direct for Best Experience</h2>
+
+  <ul>
+    <li>Best available rates</li>
+    <li>Faster communication via WhatsApp</li>
+    <li>Personalized stay arrangements</li>
+  </ul>
+
+</section>
 
   <!-- =========================
        CTA SECTION (BOOKING PUSH)
@@ -134,7 +229,8 @@ frame-src https://www.google.com https://www.google.com/maps;
     <h2>Plan Your Mara Stay</h2>
 
     <p>
-      Escape into silence, wildlife, and open skies. Mara House is designed for slow living and deep connection to nature.
+      Escape into silence, wildlife, and open skies. Mara House is designed for slow living and deep connection to
+      nature.
     </p>
 
     <a href="contact.html" class="btn">Book Your Experience</a>
@@ -147,7 +243,7 @@ frame-src https://www.google.com https://www.google.com/maps;
   <a href="https://wa.me/254790441339" class="whatsapp-float" target="_blank">
     💬 Book Mara
   </a>
-
+  <div id="footer-container"></div>
   <script src="main.js"></script>
 
 </body>

@@ -1,55 +1,55 @@
 "use strict";
 
 /* =========================
-   NAVBAR SCROLL
+   LOAD COMPONENTS (NAV + FOOTER)
 ========================= */
+document.addEventListener("DOMContentLoaded", async () => {
 
-const nav = document.querySelector(".nav");
+  const navbarContainer = document.getElementById("navbar-container");
 
-function handleNavScroll() {
-  if (!nav) return;
+  if (navbarContainer) {
+    const navRes = await fetch("components/navbar.html");
+    const navHtml = await navRes.text();
 
-  const triggerPoint = 80; // consistent across all pages
+    navbarContainer.innerHTML = navHtml;
 
-  if (window.scrollY > triggerPoint) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
+    requestAnimationFrame(() => {
+      setActiveLink();
+      initMobileMenu();
+initNavSlider();    });
   }
-}
 
-/* =========================
-   SCROLL PROGRESS BAR
-========================= */
+  const footerContainer = document.getElementById("footer-container");
 
-function updateProgressBar() {
-  const bar = document.getElementById("progressBar");
-  if (!bar) return;
+  if (footerContainer) {
+    const footerRes = await fetch("components/footer.html");
+    const footerHtml = await footerRes.text();
 
-  const scrollTop = document.documentElement.scrollTop;
-  const height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+    footerContainer.innerHTML = footerHtml;
+  }
 
-  const progress = (scrollTop / height) * 100;
-  bar.style.width = progress + "%";
-}
-
-/* =========================
-   ACTIVE LINK HIGHLIGHT
+});/* =========================
+   ACTIVE PAGE UNDERLINE LOGIC
 ========================= */
 
 function setActiveLink() {
   const links = document.querySelectorAll(".nav-links a");
-  const current = window.location.pathname.split("/").pop();
+
+  let current = window.location.pathname.split("/").pop();
+
+  if (!current || current === "") {
+    current = "index.html";
+  }
 
   links.forEach(link => {
     const href = link.getAttribute("href");
+
     if (href === current) {
       link.classList.add("active");
     }
   });
 }
+
 
 /* =========================
    MOBILE MENU
@@ -73,12 +73,12 @@ function initMobileMenu() {
   });
 }
 
+
 /* =========================
-   HERO SLIDER (SAFE)
+   HERO SLIDER
 ========================= */
 
 let heroIndex = 0;
-let heroInterval;
 
 function initHeroSlider() {
   const heroSlides = document.querySelectorAll(".hero-slider .slide");
@@ -90,14 +90,15 @@ function initHeroSlider() {
     heroSlides[i].classList.add("active");
   }
 
-  heroInterval = setInterval(() => {
+  setInterval(() => {
     heroIndex = (heroIndex + 1) % heroSlides.length;
     showSlide(heroIndex);
   }, 5000);
 }
 
+
 /* =========================
-   MOMENTS SLIDESHOW (SAFE)
+   MOMENTS SLIDESHOW
 ========================= */
 
 let slideIndex = 1;
@@ -137,8 +138,10 @@ function initMomentsSlider() {
     showSlides(slideIndex);
   }, 5000);
 }
+
+
 /* =========================
-   ROOM CARD SLIDERS
+   ROOM SLIDERS
 ========================= */
 
 function initRoomSliders() {
@@ -158,12 +161,33 @@ function initRoomSliders() {
   });
 }
 
-/* INIT */
-window.addEventListener("load", () => {
-  initRoomSliders();
-});
+function initReviewSlider() {
+  const track = document.querySelector(".review-track");
+  const cards = document.querySelectorAll(".review-card");
+
+  if (!track || !cards.length) return;
+
+  let index = 0;
+
+  function getVisibleCount() {
+    return window.innerWidth < 900 ? 1 : 4;
+  }
+
+  function moveSlider() {
+    const visible = getVisibleCount();
+
+    const cardWidth = cards[0].offsetWidth + 20; // gap included
+    const maxIndex = cards.length - visible;
+
+    index = (index >= maxIndex) ? 0 : index + 1;
+
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  setInterval(moveSlider, 4000);
+}
 /* =========================
-   LIGHTBOX (NEW FIX)
+   LIGHTBOX
 ========================= */
 
 function initLightbox() {
@@ -173,7 +197,7 @@ function initLightbox() {
 
   if (!lightbox || !lightboxImg || !closeBtn) return;
 
-  document.querySelectorAll(".slide-img img").forEach(img => {
+  document.querySelectorAll(".slide-img img, .gallery-grid img").forEach(img => {
     img.addEventListener("click", () => {
       lightbox.classList.add("active");
       lightboxImg.src = img.src;
@@ -192,18 +216,167 @@ function initLightbox() {
 }
 
 /* =========================
-   INIT ALL
+   FEATURED GALLERY SYSTEM
 ========================= */
 
-window.addEventListener("scroll", () => {
-  handleNavScroll();
-  updateProgressBar();
-});
+function initGallery() {
+
+  const featured = document.getElementById("featured-image");
+  const caption = document.getElementById("gallery-caption");
+
+  const thumbs = document.querySelectorAll(".gallery-thumb");
+
+  // modal
+  const modal = document.getElementById("gallery-modal");
+  const modalImg = document.getElementById("modal-image");
+  const modalCaption = document.getElementById("modal-caption");
+  const closeBtn = document.getElementById("gallery-close");
+
+  if (!featured || !thumbs.length) return;
+
+  let current = 0;
+
+  /* =========================
+     SHOW IMAGE FUNCTION
+  ========================== */
+
+  function showImage(index) {
+
+    const selected = thumbs[index];
+    const title = selected.dataset.title || "";
+
+    featured.style.opacity = 0;
+
+    setTimeout(() => {
+
+      featured.src = selected.src;
+      modalImg.src = selected.src;
+
+      // ✅ caption now comes from HTML
+      caption.textContent = title;
+      modalCaption.textContent = title;
+
+      thumbs.forEach(t => t.classList.remove("active-thumb"));
+      selected.classList.add("active-thumb");
+
+      current = index;
+
+      featured.style.opacity = 1;
+
+    }, 250);
+  }
+
+  /* =========================
+     THUMB CLICK
+  ========================== */
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      showImage(index);
+    });
+  });
+
+  /* =========================
+     OPEN FULLSCREEN
+  ========================== */
+
+  featured.addEventListener("click", () => {
+    modal.classList.add("active");
+    modalImg.src = featured.src;
+    modalCaption.textContent = caption.textContent;
+  });
+
+  /* CLOSE MODAL */
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+  /* =========================
+     KEYBOARD NAVIGATION
+  ========================== */
+
+  document.addEventListener("keydown", (e) => {
+
+    if (!modal.classList.contains("active")) {
+
+      if (e.key === "ArrowRight") {
+        current = (current + 1) % thumbs.length;
+        showImage(current);
+      }
+
+      if (e.key === "ArrowLeft") {
+        current = (current - 1 + thumbs.length) % thumbs.length;
+        showImage(current);
+      }
+
+    }
+
+    if (e.key === "Escape") {
+      modal.classList.remove("active");
+    }
+
+  });
+
+  /* =========================
+     SWIPE (MOBILE)
+  ========================== */
+
+  let startX = 0;
+
+  featured.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  featured.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+
+    let diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+
+      if (diff > 0) {
+        current = (current + 1) % thumbs.length;
+      } else {
+        current = (current - 1 + thumbs.length) % thumbs.length;
+      }
+
+      showImage(current);
+    }
+
+  });
+
+  /* =========================
+     AUTO SLIDESHOW
+  ========================== */
+
+  setInterval(() => {
+    current = (current + 1) % thumbs.length;
+    showImage(current);
+  }, 4000);
+
+  /* =========================
+     LAZY LOADING
+  ========================== */
+
+  thumbs.forEach(img => {
+    img.loading = "lazy";
+  });
+
+}
+/* =========================
+   INIT EVERYTHING
+========================= */
 
 window.addEventListener("DOMContentLoaded", () => {
-  setActiveLink();
-  initMobileMenu();
   initHeroSlider();
   initMomentsSlider();
   initLightbox();
+  initReviewSlider();
+  initGallery();
 });

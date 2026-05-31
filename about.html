@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="Content-Security-Policy" content="
+  <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
@@ -15,47 +15,24 @@ frame-src https://www.google.com https://www.google.com/maps;
 ">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <title>About | Larami Houses</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- =========================
        NAVBAR
   ========================== -->
-  <header class="nav" id="navbar">
-
-    <div class="logo">Larami Houses</div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="narok.html">Narok</a></li>
-      <li><a href="mara.html">Mara</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="menu-btn">☰</div>
-
-  </header>
-
-  <div class="menu-overlay"></div>
-
-  <div class="side-menu">
-    <a href="index.html">Home</a>
-    <a href="narok.html">Narok House</a>
-    <a href="mara.html">Mara House</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <div id="navbar-container"></div>
 
   <!-- =========================
        HERO
   ========================== -->
-  <section class="page-hero" style="background-image:url('assets/images/family2.webp')">
+  <section class="page-hero" 
+  style="background-image:url('assets/images/family2.webp')">
 
     <div class="overlay-text">
       <h1>Our Story</h1>
@@ -73,7 +50,8 @@ frame-src https://www.google.com https://www.google.com/maps;
 
     <p>
       Larami Houses is a hospitality brand built around simplicity, comfort, and proximity to nature.
-      One home sits in Narok town, designed for ease and rest. The other sits closer to the Maasai Mara ecosystem, designed for immersion and silence.
+      One home sits in Narok town, designed for ease and rest. The other sits closer to the Maasai Mara ecosystem,
+      designed for immersion and silence.
     </p>
 
     <p>
@@ -124,7 +102,7 @@ frame-src https://www.google.com https://www.google.com/maps;
   <a href="https://wa.me/254790441339" class="whatsapp-float" target="_blank">
     💬 Contact Us
   </a>
-
+  <div id="footer-container"></div>
   <script src="main.js"></script>
 
 </body>

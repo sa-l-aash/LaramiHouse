@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="Content-Security-Policy" content="
+  <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
@@ -15,7 +15,8 @@ frame-src https://www.google.com https://www.google.com/maps;
 ">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <title>Contact | Larami Houses</title>
 
   <link rel="stylesheet" href="style.css">
@@ -26,56 +27,29 @@ frame-src https://www.google.com https://www.google.com/maps;
   <!-- =========================
        NAVBAR
   ========================== -->
-  <header class="nav" id="navbar">
+  <div id="navbar-container"></div>
 
-    <div class="logo">Larami Houses</div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="narok.html">Narok</a></li>
-      <li><a href="mara.html">Mara</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="menu-btn">☰</div>
-
-  </header>
-
-  <div class="menu-overlay"></div>
-
-  <div class="side-menu">
-    <a href="index.html">Home</a>
-    <a href="narok.html">Narok House</a>
-    <a href="mara.html">Mara House</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-<!-- =========================
+  <!-- =========================
      HERO (PREMIUM UPGRADE)
 ========================= -->
 
-<section class="page-hero contact-hero">
+  <section class="page-hero">
 
-  <!-- background layer (keeps style-image separation clean) -->
-  <div class="hero-bg" style="background-image:url('assets/images/hero3.webp')"></div>
+    <!-- background layer (keeps style-image separation clean) -->
+    <div class="hero-bg" style="background-image:url('assets/images/hero3.webp')"></div>
 
-  <!-- dark overlay for readability -->
-  <div class="hero-overlay"></div>
+    <!-- content -->
+    <div class="overlay-text">
+      <h1>Contact & Booking</h1>
+      <p>Let’s get your stay arranged with ease and comfort</p>
 
-  <!-- content -->
-  <div class="overlay-text">
-    <h1>Contact & Booking</h1>
-    <p>Let’s get your stay arranged with ease and comfort</p>
-
-    <div class="hero-actions">
-      <a href="https://wa.me/254729858777" class="hero-btn primary">WhatsApp Us</a>
-      <a href="tel:+254729858777" class="hero-btn secondary">Call Now</a>
+      <div class="hero-actions">
+        <a href="https://wa.me/254729858777" class="hero-btn primary">WhatsApp Us</a>
+        <a href="tel:+254729858777" class="hero-btn secondary">Call Now</a>
+      </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
   <!-- =========================
        CONTACT CONTENT
@@ -142,7 +116,7 @@ frame-src https://www.google.com https://www.google.com/maps;
     </div>
 
   </section>
-
+  <div id="footer-container"></div>
   <script src="main.js"></script>
 
 </body>

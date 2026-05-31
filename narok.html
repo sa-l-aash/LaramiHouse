@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="Content-Security-Policy" content="
+  <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
@@ -15,7 +15,7 @@ frame-src https://www.google.com https://www.google.com/maps;
 ">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap"
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
     rel="stylesheet">
   <title>Narok House | Larami Houses</title>
 
@@ -27,36 +27,12 @@ frame-src https://www.google.com https://www.google.com/maps;
   <!-- =========================
        NAVBAR
   ========================== -->
-  <header class="nav" id="navbar">
-
-    <div class="logo">Larami Houses</div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="narok.html">Narok</a></li>
-      <li><a href="mara.html">Mara</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="menu-btn">☰</div>
-
-  </header>
-
-  <div class="menu-overlay"></div>
-
-  <div class="side-menu">
-    <a href="index.html">Home</a>
-    <a href="narok.html">Narok House</a>
-    <a href="mara.html">Mara House</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <div id="navbar-container"></div>
 
   <!-- =========================
        HERO
   ========================== -->
-  <section class="hero-slider narok-hero">
+  <section class="hero-slider">
 
     <div class="slide active" style="background-image:url('assets/images/narok1.webp')">
       <div class="overlay">
@@ -191,7 +167,8 @@ frame-src https://www.google.com https://www.google.com/maps;
                 <span>Booking.com</span>
               </a>
 
-            </div> </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -245,7 +222,8 @@ frame-src https://www.google.com https://www.google.com/maps;
                 <span>Booking.com</span>
               </a>
 
-            </div></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -299,7 +277,8 @@ frame-src https://www.google.com https://www.google.com/maps;
                 <span>Booking.com</span>
               </a>
 
-            </div></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -360,7 +339,82 @@ frame-src https://www.google.com https://www.google.com/maps;
 
     </div>
   </section>
+<section class="value-section">
 
+  <h2>Why Stay at Narok House</h2>
+
+  <p class="value-intro">
+    A calm, private base in Narok designed for rest, travel ease, and comfort before or after your Maasai Mara experience.
+  </p>
+
+  <div class="value-grid">
+
+    <div class="value-card">
+      <h3>Peaceful Town Escape</h3>
+      <p>Located in a quiet residential area away from noise, perfect for rest and recovery during travel.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>Safe & Private Stay</h3>
+      <p>Secure gated environment with fully self-contained units for complete privacy.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>Ideal Safari Stopover</h3>
+      <p>Perfect resting point before or after visiting Maasai Mara conservancies and game drives.</p>
+    </div>
+
+  </div>
+
+</section>
+<section class="difference-section">
+
+  <div class="difference-container">
+
+    <!-- TEXT SIDE -->
+    <div class="difference-text">
+
+      <h2>What Makes Us Different</h2>
+
+      <div class="difference-list">
+
+        <div class="difference-item">
+          <span>✔</span>
+          <p>All rooms are self-contained to ensure privacy</p>
+        </div>
+
+        <div class="difference-item">
+          <span>✔</span>
+          <p>Spacious, modern interior designed for comfort</p>
+        </div>
+
+        <div class="difference-item">
+          <span>✔</span>
+          <p>Reliable WiFi suitable for work and long stays</p>
+        </div>
+
+        <div class="difference-item">
+          <span>✔</span>
+          <p>Quiet environment ideal for recovery and rest</p>
+        </div>
+
+        <div class="difference-item">
+          <span>✔</span>
+          <p>Perfect base between Nairobi and Maasai Mara</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- IMAGE SIDE -->
+    <div class="difference-image">
+      <img src="assets/images/family3.webp" alt="Narok House Interior">
+    </div>
+
+  </div>
+
+</section>
   <!-- =========================
      AMENITIES (PREMIUM STYLE)
 ========================== -->
@@ -405,25 +459,189 @@ frame-src https://www.google.com https://www.google.com/maps;
     </div>
 
   </section>
-  <!-- =========================
-       Map section
-  ========================== -->
-<section class="map-section">
+ <section class="reviews">
 
-  <h2>Location</h2>
+  <h2>What Guests Say</h2>
+  <p class="reviews-sub">Real experiences from people who stayed at Narok House</p>
 
-  <div class="map-wrapper">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.63930120555375!2d35.8689863!3d-1.0762824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182c03848d0c072f%3A0x23245081c3fd525a!2slarami%20house%20narok!5e0!3m2!1sen!2ske!4v1780127070364!5m2!1sen!2ske"
-      width="600"
-      height="450"
-      style="border:0;"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
+  <div class="review-wrapper">
+
+    <div class="review-track">
+
+      <div class="review-card">
+        <p>“Excellent home and friendly staff. Very quiet.”</p>
+        <div class="name">— Veronica W.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>“Exactly as described. Quiet and very comfortable stay.”</p>
+        <div class="name">— Sarah M.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>“Perfect stopover before Maasai Mara. Great communication.”</p>
+        <div class="name">— David O.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>“Safe, clean, and easy check-in. Would definitely return.”</p>
+        <div class="name">— Brian W.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>“Very clean and peaceful place. WiFi was strong and reliable.”</p>
+        <div class="name">— James K.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>“Loved the calm environment and modern setup.”</p>
+        <div class="name">— Amina N.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+
+    </div>
+
   </div>
 
 </section>
+
+<!-- =========================
+     FEATURED GALLERY
+========================= -->
+
+<section class="gallery">
+
+  <h2>Gallery</h2>
+
+  <p class="gallery-sub">
+    Explore Larami through carefully captured moments.
+  </p>
+
+  <!-- BIG IMAGE -->
+  <div class="gallery-feature">
+
+    <img
+      id="featured-image"
+      src="assets/images/gallery1.webp"
+      alt="Gallery Image">
+
+    <div class="gallery-caption" id="gallery-caption">
+      Family Bedroom
+    </div>
+
+    <!-- =========================
+     FULLSCREEN GALLERY MODAL
+========================= -->
+
+<div class="gallery-modal" id="gallery-modal">
+
+  <span class="gallery-close" id="gallery-close">&times;</span>
+
+  <img id="modal-image" src="" alt="Full view">
+
+  <div class="modal-caption" id="modal-caption"></div>
+
+</div>
+
+  </div>
+
+  <!-- THUMBNAILS -->
+<div class="gallery-grid">
+
+  <img src="assets/images/family.webp"
+       class="gallery-thumb active-thumb"
+       data-title="Family Bedroom">
+
+  <img src="assets/images/family1.webp"
+       class="gallery-thumb"
+       data-title="Simba Sitting Area">
+
+  <img src="assets/images/family2.webp"
+       class="gallery-thumb"
+       data-title="Nyati Lounge">
+
+  <img src="assets/images/family3.webp"
+       class="gallery-thumb"
+       data-title="Kifaru Studio">
+
+  <img src="assets/images/narok1.webp"
+       class="gallery-thumb"
+       data-title="Chui Minimal Room">
+
+  <img src="assets/images/narok2.webp"
+       class="gallery-thumb"
+       data-title="Outdoor Views">
+       <img src="assets/images/family.webp"
+       class="gallery-thumb active-thumb"
+       data-title="Family Bedroom">
+
+  <img src="assets/images/family1.webp"
+       class="gallery-thumb"
+       data-title="Simba Sitting Area">
+
+  <img src="assets/images/family2.webp"
+       class="gallery-thumb"
+       data-title="Nyati Lounge">
+
+  <img src="assets/images/family3.webp"
+       class="gallery-thumb"
+       data-title="Kifaru Studio">
+
+  <img src="assets/images/narok1.webp"
+       class="gallery-thumb"
+       data-title="Chui Minimal Room">
+
+  <img src="assets/images/narok2.webp"
+       class="gallery-thumb"
+       data-title="Outdoor Views">
+
+</div>
+</section>
+</section>
+  <section class="travel-section">
+
+  <h2>Getting Here</h2>
+
+  <div class="travel-grid">
+
+    <div class="travel-card">
+      <h3>📍 From Nairobi</h3>
+      <p>Approximately 2.5–3.5 hours by road via Narok highway.</p>
+    </div>
+
+    <div class="travel-card">
+      <h3>To Maasai Mara</h3>
+      <p>Easy access to Sekenani and other main reserve gates.</p>
+    </div>
+
+    <div class="travel-card">
+      <h3>Local Access</h3>
+      <p>Close to Narok town center, transport, restaurants, and shops.</p>
+    </div>
+
+  </div>
+
+</section>
+  <!-- =========================
+       Map section
+  ========================== -->
+  <section class="map-section">
+
+    <h2>Location</h2>
+
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.63930120555375!2d35.8689863!3d-1.0762824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182c03848d0c072f%3A0x23245081c3fd525a!2slarami%20house%20narok!5e0!3m2!1sen!2ske!4v1780127070364!5m2!1sen!2ske"
+        width="600" height="450" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+
+  </section>
 
   <!-- =========================
        WHATSAPP BUTTON
@@ -431,7 +649,7 @@ frame-src https://www.google.com https://www.google.com/maps;
   <a href="https://wa.me/254 729 858 777" class="whatsapp-float" target="_blank">
     💬 Book Narok
   </a>
-
+  <div id="footer-container"></div>
   <script src="main.js"></script>
 
 </body>
