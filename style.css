@@ -1453,13 +1453,16 @@ font-weight: bold;
 
   gap: 50px;
 }
-
+.follow{
+  padding-top: 20px;
+}
 .footer-col h3,
 .footer-col h4 {
   margin-bottom: 20px;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 500;
+ 
 }
 
 .footer-col p {
@@ -1503,4 +1506,30 @@ font-weight: bold;
     padding: 60px 7% 25px;
   }
 
+}
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+.social-links a {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+
+  color: rgba(255,255,255,.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all .3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  transform: translateY(-3px);
 }

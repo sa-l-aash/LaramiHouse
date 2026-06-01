@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     requestAnimationFrame(() => {
       setActiveLink();
       initMobileMenu();
-initNavSlider();    });
+   });
   }
 
   const footerContainer = document.getElementById("footer-container");
