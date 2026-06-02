@@ -73,7 +73,31 @@ function initMobileMenu() {
   });
 }
 
+function initRoomSliders() {
 
+  const sliders = document.querySelectorAll(".room-image.slider");
+
+  sliders.forEach(slider => {
+
+    const slides = slider.querySelectorAll(".slide");
+
+    if (slides.length <= 1) return;
+
+    let index = 0;
+
+    setInterval(() => {
+
+      slides[index].classList.remove("active");
+
+      index = (index + 1) % slides.length;
+
+      slides[index].classList.add("active");
+
+    }, 3000);
+
+  });
+
+}
 /* =========================
    HERO SLIDER
 ========================= */
@@ -139,7 +163,38 @@ function initMomentsSlider() {
   }, 5000);
 }
 
+function initCurtainReveal() {
 
+  const items = document.querySelectorAll(".reveal-wrap");
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        const el = entry.target;
+
+        el.classList.add("show");
+
+        const curtain = el.querySelector(".reveal-curtain");
+
+        // 🔥 remove curtain AFTER animation ends
+        if (curtain) {
+          curtain.addEventListener("animationend", () => {
+            curtain.style.display = "none";
+          }, { once: true });
+        }
+
+        observer.unobserve(el);
+      }
+
+    });
+
+  }, { threshold: 0.2 });
+
+  items.forEach(item => observer.observe(item));
+}
 /* =========================
    ROOM SLIDERS
 ========================= */
@@ -375,8 +430,10 @@ function initGallery() {
 
 window.addEventListener("DOMContentLoaded", () => {
   initHeroSlider();
+  initRoomSliders();
   initMomentsSlider();
   initLightbox();
   initReviewSlider();
   initGallery();
+  initCurtainReveal();
 });

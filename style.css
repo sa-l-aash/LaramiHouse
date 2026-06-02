@@ -488,7 +488,61 @@ min-height: 100%;
 .hero-slider .overlay h1 {
   font-size: 42px;
 }
+.room-image.slider {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+}
 
+/* tablets */
+@media (max-width: 900px) {
+  .room-image.slider {
+    height: 240px;
+  }
+}
+
+/* phones */
+@media (max-width: 600px) {
+  .room-image.slider {
+    height: 200px;
+  }
+}
+
+/* very small phones */
+@media (max-width: 400px) {
+  .room-image.slider {
+    height: 180px;
+  }
+}
+
+/* slides stack perfectly */
+.room-image.slider .slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transform: scale(1.03);
+
+  transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+/* active slide */
+.room-image.slider .slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* image behavior */
+.room-image.slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 /* =========================
    PAGE HERO
 ========================= */
@@ -781,7 +835,55 @@ text-align: center;
 .pill-btn:active {
   transform: scale(0.96);
 }
+.reveal-wrap {
+  position: relative;
+  overflow: hidden;
+}
 
+.reveal-img {
+  width: 100%;
+  display: block;
+
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.2s ease, transform 1.4s ease;
+}
+
+/* curtain */
+.reveal-curtain {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #c7b08a, #e7d8bd);
+
+  z-index: 2;
+  transform: translateX(0);
+}
+
+/* ACTIVE STATE */
+.reveal-wrap.show .reveal-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* smooth wipe */
+.reveal-wrap.show .reveal-curtain {
+  animation: curtainWipe 1.3s ease forwards;
+}
+
+@keyframes curtainWipe {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 🔥 KEY FIX: remove curtain AFTER animation fully ends */
+.reveal-wrap.show .reveal-curtain {
+  animation-fill-mode: forwards;
+}
 /* =========================
    ROOM IMAGE SLIDER
 ========================= */
