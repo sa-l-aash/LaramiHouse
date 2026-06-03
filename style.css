@@ -16,7 +16,7 @@ body {
   line-height: 1.7;
   font-family: "Inter", system-ui, -apple-system, sans-serif !important;
   font-weight: 400;
-min-height: 100%;
+  min-height: 100%;
 }
 
 /* =========================
@@ -32,6 +32,7 @@ min-height: 100%;
   background: #222;
   z-index: 9999;
 }
+
 .about-home {
   padding: 25px 8%;
   max-width: 1000px;
@@ -97,7 +98,7 @@ min-height: 100%;
   background: #fff;
 
   box-shadow:
-    0 15px 40px rgba(0,0,0,0.08);
+    0 15px 40px rgba(0, 0, 0, 0.08);
 
   transition:
     transform 0.35s ease,
@@ -108,7 +109,7 @@ min-height: 100%;
   transform: translateY(-8px);
 
   box-shadow:
-    0 25px 50px rgba(0,0,0,0.12);
+    0 25px 50px rgba(0, 0, 0, 0.12);
 }
 
 .destination-card img {
@@ -135,6 +136,7 @@ min-height: 100%;
   color: #666;
   line-height: 1.8;
 }
+
 @media (max-width: 900px) {
 
   .destination-grid {
@@ -151,6 +153,7 @@ min-height: 100%;
   }
 
 }
+
 /* =========================
    PREMIUM SAFARI NAVBAR
 ========================= */
@@ -237,6 +240,7 @@ min-height: 100%;
   letter-spacing: 2px;
   font-weight: 600;
 }
+
 /* OPTIONAL: small dot above text (extra clarity) */
 .nav-links a.active::before {
   content: "";
@@ -252,6 +256,7 @@ min-height: 100%;
   background: white;
   border-radius: 50%;
 }
+
 /* underline indicator */
 .nav-links a.active::after {
   content: "";
@@ -488,6 +493,7 @@ min-height: 100%;
 .hero-slider .overlay h1 {
   font-size: 42px;
 }
+
 .room-image.slider {
   position: relative;
   width: 100%;
@@ -543,6 +549,7 @@ min-height: 100%;
   object-position: center;
   display: block;
 }
+
 /* =========================
    PAGE HERO
 ========================= */
@@ -571,19 +578,23 @@ min-height: 100%;
 /* =========================
    CONTENT
 ========================= */
+.content h2 {
+  font-size: 2.2rem;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+}
 
 .content {
+
   max-width: 800px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 20px 20px;
 }
 
 .content ul {
   margin-left: 20px;
 }
-.experience-strip{
-text-align: center;
-}
+
 /* =========================
    BUTTON
 ========================= */
@@ -835,6 +846,7 @@ text-align: center;
 .pill-btn:active {
   transform: scale(0.96);
 }
+
 .reveal-wrap {
   position: relative;
   overflow: hidden;
@@ -884,6 +896,7 @@ text-align: center;
 .reveal-wrap.show .reveal-curtain {
   animation-fill-mode: forwards;
 }
+
 /* =========================
    ROOM IMAGE SLIDER
 ========================= */
@@ -924,6 +937,7 @@ text-align: center;
   border-radius: 20px;
   z-index: 5;
 }
+
 /* =========================
    VALUE PROPOSITION / TRAVEL STYLE / DIFFERENCE
 ========================= */
@@ -950,15 +964,16 @@ text-align: center;
 
 .value-card,
 .travel-card {
-  background:#ffffff;
+  background: #ffffff;
   border-radius: 14px;
   color: #000000;
   padding: 25px;
   text-align: left;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
+
 .value-card h3,
 .travel-card h3 {
   color: #222;
@@ -968,10 +983,12 @@ text-align: center;
 .travel-card p {
   color: #555;
 }
+
 .value-card:hover,
 .travel-card:hover {
   transform: translateY(-5px);
 }
+
 /* DIFFERENCE SECTION */
 
 .difference-container {
@@ -992,16 +1009,16 @@ text-align: center;
 
 /* LIST */
 .difference-list {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
- 
+
 }
 
 .difference-item {
   display: flex;
   gap: 12px;
-  
+
 }
 
 .difference-item span {
@@ -1019,8 +1036,9 @@ text-align: center;
   height: 300px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
+
 @media (max-width: 900px) {
   .difference-container {
     flex-direction: column;
@@ -1029,6 +1047,72 @@ text-align: center;
   .difference-image img {
     height: 300px;
   }
+}
+
+/* =========================
+ Experiences
+========================= */
+.experiences {
+  padding: 90px 8%;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.experiences h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* GRID */
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ITEM */
+.experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  background: #faf9f7;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover effect */
+.experience:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* bullet dot */
+.experience .dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 7px;
+
+  background: #c7b08a;
+  /* safari gold */
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* text */
+.experience {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* =========================
@@ -1096,6 +1180,7 @@ text-align: center;
     grid-template-columns: 1fr;
   }
 }
+
 /* =========================
    FAQ
 ========================= */
@@ -1109,10 +1194,12 @@ text-align: center;
 .faq h2 {
   text-align: center;
   margin-bottom: 40px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
 }
 
 .faq-item {
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .faq-question {
@@ -1136,14 +1223,17 @@ text-align: center;
 
   transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
 
-  color: rgba(0,0,0,.7);
+  color: rgba(0, 0, 0, .7);
 }
+
 .faq-item.active .faq-answer {
-  max-height: 300px; /* enough for most answers */
+  max-height: 300px;
+  /* enough for most answers */
   opacity: 1;
   transform: translateY(0);
   padding-top: 10px;
 }
+
 /* =========================
    MOMENTS SLIDESHOW
 ========================= */
@@ -1292,6 +1382,7 @@ text-align: center;
     right: 20px;
   }
 }
+
 /* =========================
    REVIEWS SECTION
 ========================= */
@@ -1308,7 +1399,7 @@ text-align: center;
 }
 
 .reviews-sub {
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   margin-bottom: 40px;
 }
 
@@ -1334,11 +1425,12 @@ text-align: center;
 ========================= */
 
 .review-card {
-  flex: 0 0 calc(25% - 15px); /* 4 cards per view */
+  flex: 0 0 calc(25% - 15px);
+  /* 4 cards per view */
   background: #fff;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: left;
 }
 
@@ -1351,7 +1443,7 @@ text-align: center;
 /* review text */
 .review-card p {
   font-style: italic;
-  color: rgba(0,0,0,0.75);
+  color: rgba(0, 0, 0, 0.75);
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -1389,13 +1481,13 @@ text-align: center;
 
 .gallery h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
 .gallery-sub {
   margin-bottom: 35px;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /* =========================
@@ -1405,7 +1497,8 @@ text-align: center;
 .gallery-feature {
   position: relative;
   max-width: 1100px;
-  margin-bottom: 0 auto;;
+  margin-bottom: 0 auto;
+  ;
 }
 
 .gallery-feature img {
@@ -1413,8 +1506,8 @@ text-align: center;
   height: 580px;
   object-fit: cover;
   border-radius: 16px;
-position: relative;
-z-index:1;
+  position: relative;
+  z-index: 1;
   /* FADE EFFECT */
   opacity: 1;
   transition: opacity 0.6s ease;
@@ -1435,7 +1528,7 @@ z-index:1;
 
   padding: 10px 16px;
   border-radius: 10px;
-font-weight: bold;
+  font-weight: bold;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
 
@@ -1452,6 +1545,7 @@ font-weight: bold;
   gap: 10px;
   width: 100%;
 }
+
 @media (max-width: 900px) {
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1504,6 +1598,7 @@ font-weight: bold;
     height: 350px;
   }
 }
+
 @media (min-width: 1400px) {
   .gallery-feature img {
     max-height: 500px;
@@ -1515,6 +1610,7 @@ font-weight: bold;
     height: 320px;
   }
 }
+
 /* =========================
    FULLSCREEN MODAL
 ========================= */
@@ -1523,7 +1619,7 @@ font-weight: bold;
   position: fixed;
   inset: 0;
 
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 
   display: flex;
   align-items: center;
@@ -1601,16 +1697,18 @@ font-weight: bold;
 
   gap: 50px;
 }
-.follow{
+
+.follow {
   padding-top: 20px;
 }
+
 .footer-col h3,
 .footer-col h4 {
   margin-bottom: 20px;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 500;
- 
+
 }
 
 .footer-col p {
@@ -1655,19 +1753,21 @@ font-weight: bold;
   }
 
 }
+
 .social-links {
   display: flex;
   gap: 16px;
   margin-top: 10px;
 }
+
 .social-links a {
   width: 42px;
   height: 42px;
 
-  border: 1px solid rgba(255,255,255,.15);
+  border: 1px solid rgba(255, 255, 255, .15);
   border-radius: 50%;
 
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, .75);
 
   display: flex;
   align-items: center;
@@ -1677,7 +1777,7 @@ font-weight: bold;
 }
 
 .social-links a:hover {
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
   color: #fff;
   transform: translateY(-3px);
 }
