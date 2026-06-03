@@ -269,6 +269,31 @@ function initLightbox() {
     }
   });
 }
+function initFAQ() {
+
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+
+    const button = item.querySelector(".faq-question");
+
+    button.addEventListener("click", () => {
+
+      // close all others
+      items.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("active");
+        }
+      });
+
+      // toggle current
+      item.classList.toggle("active");
+
+    });
+
+  });
+
+}
 
 /* =========================
    FEATURED GALLERY SYSTEM
@@ -436,4 +461,5 @@ window.addEventListener("DOMContentLoaded", () => {
   initReviewSlider();
   initGallery();
   initCurtainReveal();
+  initFAQ();
 });
