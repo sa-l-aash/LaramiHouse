@@ -170,7 +170,7 @@ body {
 
   padding: 26px 70px;
 
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(164, 54, 0, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
@@ -1123,7 +1123,10 @@ body {
   padding: 20px 60px;
   text-align: center;
 }
-
+.amenities h2{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+}
 .amenities-sub {
   margin-top: 10px;
   color: #000000;
