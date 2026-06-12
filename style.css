@@ -170,7 +170,7 @@ body {
 
   padding: 26px 70px;
 
-  background: rgba(164, 54, 0, 0.8);
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
@@ -576,6 +576,85 @@ body {
 }
 
 /* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy {
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.philosophy h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.philosophy-sub {
+ 
+  margin: 0 auto 40px;
+  color: rgba(0, 0, 0,1);
+ 
+}
+
+/* LIST */
+
+.philosophy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 24px;
+  row-gap: 18px;
+
+  max-width: 700px;  
+  width: 100%;
+  
+  justify-content: center;
+  text-align: left;
+}
+
+.philosophy-list li {
+  position: relative;
+  padding-left: 28px;
+
+  color: #000000;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* CUSTOM DOT */
+
+.philosophy-list li::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #c8a97e;
+
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .philosophy-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
    CONTENT
 ========================= */
 .content h2 {
@@ -593,6 +672,10 @@ body {
 
 .content ul {
   margin-left: 20px;
+  
+}
+content p {
+  text-align: center;
 }
 
 /* =========================
