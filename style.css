@@ -1866,4 +1866,289 @@ content p {
   background: rgba(255, 255, 255, .08);
   color: #fff;
   transform: translateY(-3px);
+}/* =========================================================
+     LARAMI HOUSES - PREMIUM CONTACT HUB STYLING
+========================================================== */
+
+/* 1. Base Variables & Reset */
+:root {
+  --primary-earth:#9f4501;    /* Deep Safari Olive Green */
+  --accent-gold: #ffffff;      /* Warm Savannah Sand */
+  --text-dark: #1F2421;        /* Crisp Dark Charcoal */
+  --text-light: #606C38;       /* Muted Leaf Green */
+  --bg-cream: #FAF7F2;         /* Luxury Lodge Cream */
+  --white: #FFFFFF;
+  --whatsapp-green: #25D366;   /* Official WhatsApp Color */
+  --transition: all 0.3s ease-in-out;
+}
+
+/* 2. Main Wrapper (The Split Container) */
+.larami-contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 80vh;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-cream);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* Desktop Upgrade: Side-by-Side Split */
+@media (min-width: 992px) {
+  .larami-contact-wrapper {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* 3. Left Panel - The Destination Experience */
+.larami-info-panel {
+  background-color: var(--primary-earth);
+  color: var(--bg-cream);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.panel-content {
+  width: 100%;
+}
+
+.sub-badge {
+  display: inline-block;
+  background-color: rgba(212, 163, 115, 0.2);
+  color: var(--accent-gold);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.larami-info-panel h2 {
+  font-size: 2.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent-gold), transparent);
+  margin-bottom: 2.5rem;
+}
+
+/* Intel Grid (Location Details) */
+.intel-section h3 {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.intel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .intel-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intel-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.intel-item .icon {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.intel-item .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.intel-item .detail {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.2rem 0 0 0;
+}
+
+.platform-verification {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+/* 4. Right Panel - The Action Hub */
+.larami-action-panel {
+  background-color: var(--white);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Perks Banner */
+.perks-banner {
+  background-color: var(--bg-cream);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.perks-banner h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  color: var(--primary-earth);
+  font-weight: 600;
+}
+
+.perks-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+@media (min-width: 576px) {
+  .perks-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.perk {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* Action Cards (Buttons Replacement) */
+.booking-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text-dark);
+  border: 2px solid #EAEAEA;
+  transition: var(--transition);
+  position: relative;
+}
+
+.action-card .card-icon {
+  font-size: 2rem;
+  background: var(--bg-cream);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.action-card .card-text {
+  flex: 1;
+}
+
+.action-card h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.action-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.arrow-go {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #BBB;
+  transition: var(--transition);
+}
+
+/* Hover States & Micro-interactions */
+.action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.action-card:hover .arrow-go {
+  transform: translateX(5px);
+}
+
+/* WhatsApp Specific Styling */
+.whatsapp-card:hover {
+  border-color: var(--whatsapp-green);
+}
+.whatsapp-card:hover .card-icon {
+  background-color: rgba(37, 211, 102, 0.1);
+}
+.whatsapp-card:hover h4 {
+  color: var(--whatsapp-green);
+}
+.whatsapp-card:hover .arrow-go {
+  color: var(--whatsapp-green);
+}
+
+/* Call Specific Styling */
+.call-card:hover {
+  border-color: var(--primary-earth);
+}
+.call-card:hover .card-icon {
+  background-color: rgba(44, 62, 43, 0.1);
+}
+.call-card:hover h4 {
+  color: var(--primary-earth);
+}
+.call-card:hover .arrow-go {
+  color: var(--primary-earth);
+}
+
+/* Bottom Note */
+.secure-note {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  line-height: 1.5;
 }
