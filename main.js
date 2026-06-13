@@ -160,7 +160,7 @@ function initMomentsSlider() {
   setInterval(() => {
     slideIndex++;
     showSlides(slideIndex);
-  }, 5000);
+  }, 3000);
 }
 
 function initCurtainReveal() {
