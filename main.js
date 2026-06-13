@@ -117,7 +117,7 @@ function initHeroSlider() {
   setInterval(() => {
     heroIndex = (heroIndex + 1) % heroSlides.length;
     showSlide(heroIndex);
-  }, 5000);
+  }, 3000);
 }
 
 
