@@ -630,6 +630,47 @@ body {
   font-weight: 400;
   letter-spacing: 0.3px;
 }
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.offer-card {
+  padding: 24px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.offer-card h3 {
+  margin: 12px 0 10px;
+  font-size: 1.2rem;
+}
+
+.offer-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.offer-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 30px;
+  background: #c8a97e;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: #666;
+}
 
 /* CUSTOM DOT */
 
